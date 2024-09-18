@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+    <div class="col-3"></div>
+    <div class="col-6">
+    <form method="post">
+    <div class="imgcontainer">
+      <img src="assets/img/user.png" alt="Avatar" class="avatar" >
+    </div>
+    
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+  
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+  
+      <button type="submit" (click)="onLogin()">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+  
+    <div class="container" style="background-color:#f1f1f1">
+      <span class="psw">Forgot <a href="#">password?</a></span>
+      <h6>Note: Press Login button to enter without credentials</h6>
+    </div>
+    </form>
+    
+    </div>
+    <div class="col-3"></div>
+    </div>
+    </div>
+  
+
+<!-- <button (click)="onLogin()">Login</button> -->

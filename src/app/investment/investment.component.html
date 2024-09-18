@@ -1,0 +1,102 @@
+<br /><br />
+<!-- <form [formGroup]="investmentGroup">
+    <div class="row">
+        <div class="col-3">
+            <label for="">Asset Type</label>&nbsp;&nbsp;
+            <select name="assetType" formControlName="assetType">
+                <option value="">Select Asset</option>
+                <option value="equity">Equity</option>
+                <option value="gold">Gold</option>
+                <option value="bond">Bond</option>
+                <option value="realEstate">Real Estate</option>
+            </select>
+            <div class="text-danger" *ngIf="investmentGroup.controls['assetType'].touched">
+                <span *ngIf="investmentGroup.controls['assetType'].errors?.['required']">Asset is Required</span>
+            </div>
+        </div>
+        <div class="col-3">
+            <label for="">Quantity</label>
+            <input type="number" class="form-control" formControlName="quantity">
+            <div class="text-danger" *ngIf="investmentGroup.controls['quantity'].touched">
+                <span *ngIf="investmentGroup.controls['quantity'].errors?.['required']">Quantity is Required</span>
+                <span *ngIf="investmentGroup.controls['quantity'].errors?.['pattern']">Quantity must be a number</span>
+            </div>
+        </div>
+        <div class="col-3">
+            <label for="">Purchase Price</label>
+            <input type="number" class="form-control" formControlName="purchasePrice">
+            <div class="text-danger" *ngIf="investmentGroup.controls['purchasePrice'].touched">
+                <span *ngIf="investmentGroup.controls['purchasePrice'].errors?.['required']">Price is Required</span>
+                <span *ngIf="investmentGroup.controls['purchasePrice'].errors?.['pattern']">Price must be a whole
+                    number</span>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-3">
+            <label for="">Purchase Date</label>
+            <input type="date" class="form-control" formControlName="purchaseDate" [max]="today">
+            <div class="text-danger" *ngIf="investmentGroup.controls['purchaseDate'].touched">
+                <span *ngIf="investmentGroup.controls['purchaseDate'].errors?.['required']">Date is Required</span>
+            </div>
+        </div>
+        <div class="col-3 center">
+            <button class="btn btn-success" (click)="saveInvestment()"
+                [disabled]="investmentGroup.invalid || investmentGroup.pristine">Save</button>
+        </div>
+    </div>
+</form> -->
+
+<form [formGroup]="investmentGroup">
+    <div class="row">
+        <div class="col-12 col-sm-6 col-md-3 mb-3">
+            <label for="">Asset Type</label>&nbsp;&nbsp;
+            <select name="assetType" formControlName="assetType" class="form-control">
+                <option value="">Select Asset</option>
+                <option value="equity">Equity</option>
+                <option value="gold">Gold</option>
+                <option value="bond">Bond</option>
+                <option value="realEstate">Real Estate</option>
+            </select>
+            <div class="text-danger" *ngIf="investmentGroup.controls['assetType'].touched">
+                <span *ngIf="investmentGroup.controls['assetType'].errors?.['required']">Asset is Required</span>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-3 mb-3">
+            <label for="">Quantity</label>
+            <input type="number" class="form-control" formControlName="quantity">
+            <div class="text-danger" *ngIf="investmentGroup.controls['quantity'].touched">
+                <span *ngIf="investmentGroup.controls['quantity'].errors?.['required']">Quantity is Required</span>
+                <span *ngIf="investmentGroup.controls['quantity'].errors?.['pattern']">Quantity must be a number</span>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-3 mb-3">
+            <label for="">Purchase Price</label>
+            <input type="number" class="form-control" formControlName="purchasePrice">
+            <div class="text-danger" *ngIf="investmentGroup.controls['purchasePrice'].touched">
+                <span *ngIf="investmentGroup.controls['purchasePrice'].errors?.['required']">Price is Required</span>
+                <span *ngIf="investmentGroup.controls['purchasePrice'].errors?.['pattern']">Price must be a whole number</span>
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+    <div class="row">
+        <div class="col-12 col-sm-6 col-md-3 mb-3">
+            <label for="">Purchase Date</label>
+            <input type="date" class="form-control" formControlName="purchaseDate" [max]="today">
+            <div class="text-danger" *ngIf="investmentGroup.controls['purchaseDate'].touched">
+                <span *ngIf="investmentGroup.controls['purchaseDate'].errors?.['required']">Date is Required</span>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-3 d-flex align-items-center justify-content-center">
+            <button class="btn btn-success" (click)="saveInvestment()"
+                [disabled]="investmentGroup.invalid || investmentGroup.pristine">Save</button>
+        </div>
+    </div>
+</form>

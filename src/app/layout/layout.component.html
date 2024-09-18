@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="topbar">
+        <div class="logo">
+            <h2>FPMS</h2>
+        </div>
+        <div class="search">
+            <!-- <input type="text" name="search" placeholder="search here">
+            <label for="search"><i class="fas fa-search"></i></label> -->
+        </div>
+        <i class="fas fa-bell"></i>
+        <div class="user">
+            <img src="assets/img/user.png" alt="">
+        </div>
+    </div>
+    <div class="sidebar">
+        <ul>
+            <li routerLinkActive="active">
+                <a routerLink="investment">
+                    <i><fa-icon [icon]="faCoins"></fa-icon></i>
+                    <div>Investment</div>
+                </a>
+            </li>
+            <li routerLinkActive="active">
+                <a routerLink="dashboard">
+                    <i><fa-icon [icon]="faTachometerAlt"></fa-icon></i>
+                    <div>Dashboard</div>
+                </a>
+            </li>
+            <li routerLinkActive="active">
+                <a routerLink="login">
+                    <i><fa-icon [icon]="faSignOutAlt"></fa-icon></i>
+                    <div>Logout</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="main">
+    <router-outlet />
+</div>

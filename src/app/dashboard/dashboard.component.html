@@ -1,0 +1,32 @@
+<div class="cards">
+    <div class="card">
+        <div class="card-content">
+            <div class="number">{{ netWorth | currency:'INR':'symbol' }}</div>
+            <div class="card-name">Total NetWorth</div>
+        </div>
+        <div class="icon-box">
+            <i class="fas fa-dollar-sign"></i>
+        </div>
+    </div>
+</div>
+<div class="charts">
+    <div class="chart">
+        <h2>Performance Metrics</h2>
+        <h6>Market Trend(2 to 5%)</h6>
+        <div>
+            <div style="display: block;">
+                <canvas baseChart [data]="lineChartData" [options]="lineChartOptions" [type]="'line'">
+                </canvas>
+            </div>
+        </div>
+    </div>
+    <div class="chart doughnut-chart">
+        <h2>Asset Allocation</h2>
+        <div>
+            <div style="display: block;">
+                <canvas baseChart [data]="doughnutChartData" [options]="doughnutChartOptions" [type]="'doughnut'">
+                </canvas>
+            </div>
+        </div>
+    </div>
+</div>
